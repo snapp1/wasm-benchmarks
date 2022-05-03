@@ -5,11 +5,12 @@ const init = () => {
 
 document.addEventListener('DOMContentLoaded', init, false);
 
+var t6,t7;
 
 async function receiveData(event){
-    localStorage.setItem("t6", Date.now());
+    t6 = Date.now();
     document.getElementById("results").innerHTML = JSON.stringify(event.data[0]);
-    localStorage.setItem("t7", Date.now());
+    t7 = Date.now();
 }
   
   

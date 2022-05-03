@@ -5,14 +5,14 @@ const init = () => {
 
 document.addEventListener('DOMContentLoaded', init, false);
 
+var t5,t6,t7;
 
 async function receiveData(event){
-    localStorage.setItem("t5", Date.now());
+    t5 = Date.now();
     var data = msgpack.decode(event.data);
-    localStorage.setItem("t6", Date.now());
+    t6 = Date.now();
     document.getElementById("results").innerHTML = JSON.stringify(data[0]);
-    localStorage.setItem("t7", Date.now());
+    t7 = Date.now();
 }
-  
   
 window.addEventListener("message", receiveData, false);
